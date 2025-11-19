@@ -1,0 +1,186 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', 'Fredoka One', sans-serif;
+  text-align: center;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(270deg, #ffd1f7, #c1f7ff, #e0fff6, #ffe5b4, #ffc1e3);
+  background-size: 1000% 1000%;
+  animation: playfulBg 25s ease infinite;
+}
+
+
+.mathfinity {
+  margin: 50px 0;
+  width: 90%;
+  max-width: 700px;
+}
+
+.title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 3rem;
+  color: #ff5ca2;
+  text-shadow: 2px 3px 8px rgba(0,0,0,0.15);
+  margin-bottom: 10px;
+  animation: floatTitle 2.5s ease-in-out infinite;
+}
+
+@keyframes floatTitle {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.intro {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.activity {
+  background: #fff;
+  border-radius: 25px;
+  padding: 25px 30px;
+  margin: 25px auto;
+  max-width: 650px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  transition: box-shadow 0.3s;
+}
+
+.activity:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+.forward h2 { color: #ff6f61; }
+.backward h2 { color: #1e90ff; }
+.table h2 { color: #00b894; }
+
+.numbers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.num {
+  background: linear-gradient(135deg, #fffacd, #ffe4b5);
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  font-weight: 700;
+  color: #333;
+  transition: 0.3s;
+  animation: pop 0.4s ease-in-out;
+}
+
+.num:hover {
+  transform: scale(1.2) rotate(3deg);
+  background: linear-gradient(135deg, #ffdab9, #ff7f50);
+  color: #fff;
+}
+
+@keyframes pop {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.table-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.table-box {
+  background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+  border-radius: 15px;
+  padding: 12px;
+  font-weight: 600;
+  color: #333;
+  box-shadow: 3px 3px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.table-box:hover {
+  transform: translateY(-6px) scale(1.07);
+  background: linear-gradient(135deg, #ffd2a6, #ff9a76);
+}
+
+.bounce {
+  animation: bounceIn 0.8s ease-out;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+.error, .error404 {
+  background: #ffe6e6;
+  border-radius: 20px;
+  padding: 20px 25px;
+  margin: 30px auto;
+  max-width: 500px;
+  box-shadow: 0 6px 18px rgba(255,0,0,0.15);
+}
+
+.error h2, .error404 h3 {
+  color: #e60000;
+  font-weight: 700;
+}
+
+.error-img {
+  max-width: 120px;
+  margin-top: 12px;
+  border-radius: 50%;
+  animation: shake 1s infinite;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+}
+
+@keyframes playfulBg {
+  0%   { background-position: 0% 50%; }
+  25%  { background-position: 50% 50%; }
+  50%  { background-position: 100% 50%; }
+  75%  { background-position: 50% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+@media (max-width: 768px) {
+  .title { font-size: 2.4rem; }
+  .intro { font-size: 1rem; }
+  .activity { padding: 20px; margin: 20px auto; }
+  .table-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+  .num { padding: 8px 12px; font-size: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+  .title { font-size: 2rem; }
+  .intro { font-size: 0.95rem; }
+  .activity { padding: 15px; margin: 15px auto; }
+  .table-grid { grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+  .num { padding: 6px 10px; font-size: 0.85rem; }
+}
