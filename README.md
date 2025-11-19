@@ -39,5 +39,4 @@ It makes learning **forward counting, backward counting, and multiplication tabl
 
 
 
-# 3. Open index.html in your browser
-open index.html
+
