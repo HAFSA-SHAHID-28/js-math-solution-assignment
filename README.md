@@ -34,7 +34,6 @@ It makes learning **forward counting, backward counting, and multiplication tabl
 - **Netlify** for live hosting  
 
 
----
 
 
 
